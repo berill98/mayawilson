@@ -1,0 +1,90 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/hero.jpg') no-repeat bottom center fixed;
+    background-size: cover;
+    height: calc(100vh - 150px);
+    color: #2e1c14;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #3b3422;
+    -webkit-box-shadow: 0 -20px 25px #232514;
+            box-shadow: 0 -20px 25px #232514;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    font-family: 'Cedarville Cursive', cursive;
+    color: white;
+}
+
+.welcome-font {
+    font-family: 'Cedarville Cursive', cursive;
+    color: #2e1c14;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.book-now-button {
+    background: #757064;
+    color: white;
+    min-width: 150px;
+    font-size: 90%;
+}
+
+.btn-color {
+    background: #3b3422;
+    color: white;
+}
+
+.book-now-button:hover,
+.book-now-button:active,
+.sbook-now-button:focus,
+.btn-color:hover,
+.btn-color:active,
+.btn-color:focus {
+    background: #3b3422;
+    color: white;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+  
+  /* fixed top navbar only on medium and up */
+  @media (min-width: 992px) {
+      .fixed-top-desktop-only {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1030;
+      }
+  
+      .header-container {
+          padding-top: 150px;
+      }
+  }
