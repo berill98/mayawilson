@@ -1,0 +1,30 @@
+<ul>
+    <li class="list-inline-item dropdown">
+        <a class="text-brown nav-link d-block d-lg-none" href="#" id="user-options-mob" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="text-center">
+                <div><i class="fa-solid fa-user"></i></div>
+            </div>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options-mob">
+            {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                    <a href="" class="dropdown-item">Package Management</a>
+                {% endif %}
+                <a href="" class="dropdown-item">My Profile</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            {% endif %}
+        </div>
+    </li>
+    <li class="list-inline-item">
+        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-brown{% endif %} nav-link d-block d-lg-none" href="">
+            <div class="text-center">
+                <div class="basket-icon">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
