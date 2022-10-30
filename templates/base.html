@@ -56,7 +56,9 @@
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-center main-logo-link">
-                <h1 class="logo-font">Maya Wilson</h1>
+                <a href="{% url 'home' %}" class="nav-link navbar-brand main-logo-link">
+                    <h1 class="logo-font">Maya Wilson</h1>
+                </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-lg-right">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
@@ -102,7 +104,9 @@
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <h2 class="d-lg-none text-brown logo-font">Maya Wilson</h2>
+                <a href="{% url 'home' %}" class="nav-link navbar-brand main-logo-link">
+                    <h2 class="d-lg-none text-brown logo-font">Maya Wilson</h2>
+                </a>
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
             </nav>
