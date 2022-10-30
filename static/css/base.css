@@ -3,17 +3,11 @@ html {
 }
 
 body {
-    background: url('/media/hero.jpg') no-repeat bottom center fixed;
+    background: url('/media/hero.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 164px);
     color: #2e1c14;
     font-family: 'Roboto', sans-serif;
-}
-
-header {
-    background-color: #3b3422;
-    -webkit-box-shadow: 0 -20px 25px #232514;
-            box-shadow: 0 -20px 25px #232514;
 }
 
 /* from Bulma */
@@ -25,12 +19,11 @@ header {
     width: 1.5rem;
 }
 
-.logo-font {
-    font-family: 'Cedarville Cursive', cursive;
-    color: white;
+#booked-banner {
+    background-color: #2e1c14;
 }
 
-.welcome-font {
+.logo-font {
     font-family: 'Cedarville Cursive', cursive;
     color: #2e1c14;
 }
@@ -39,8 +32,13 @@ header {
     width: fit-content;
 }
 
+.welcome-font {
+    font-family: 'Cedarville Cursive', cursive;
+    color: white;
+}
+
 .book-now-button {
-    background: #757064;
+    background: #2e1c14;
     color: white;
     min-width: 150px;
     font-size: 90%;
@@ -61,8 +59,16 @@ header {
     color: white;
 }
 
+.text-brown {
+    color: #2e1c14 !important;
+}
+
 .border-black {
     border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
 }
 
 /* -------------------------------- Media Queries */
@@ -73,18 +79,18 @@ header {
       max-width: 80%;
     }
   }
-  
-  /* fixed top navbar only on medium and up */
-  @media (min-width: 992px) {
-      .fixed-top-desktop-only {
-          position: fixed;
-          top: 0;
-          right: 0;
-          left: 0;
-          z-index: 1030;
-      }
-  
-      .header-container {
-          padding-top: 150px;
-      }
-  }
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
