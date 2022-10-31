@@ -16,5 +16,4 @@ def add_to_basket(request, package_id):
     basket[package_id] = quantity
 
     request.session['basket'] = basket
-    print(request.session['basket'])
     return render(request, 'basket/basket.html')

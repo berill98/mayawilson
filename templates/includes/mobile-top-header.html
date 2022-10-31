@@ -19,10 +19,17 @@
         </div>
     </li>
     <li class="list-inline-item">
-        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-brown{% endif %} nav-link d-block d-lg-none" href="{% url 'view_basket' %}">
+        <a class="{% if total %}text-info font-weight-bold{% else %}text-brown{% endif %} nav-link d-block d-lg-none" href="{% url 'view_basket' %}">
             <div class="text-center">
                 <div class="basket-icon">
                     <i class="fa-solid fa-basket-shopping"></i>
+                    <p class="my-0">
+                        {% if total %}
+                            ${{ total|floatformat:2 }}
+                        {% else %}
+                            $0.00
+                        {% endif %}
+                    </p>
                 </div>
             </div>
         </a>
