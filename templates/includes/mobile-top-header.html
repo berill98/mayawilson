@@ -10,7 +10,7 @@
                 {% if request.user.is_superuser %}
                     <a href="" class="dropdown-item">Package Management</a>
                 {% endif %}
-                <a href="" class="dropdown-item">My Profile</a>
+                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
             {% else %}
                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -19,7 +19,7 @@
         </div>
     </li>
     <li class="list-inline-item">
-        <a class="{% if total %}text-info font-weight-bold{% else %}text-brown{% endif %} nav-link d-block d-lg-none" href="{% url 'view_basket' %}">
+        <a class="{% if total %}text-info font-weight-bold{% else %}text-brown{% endif %} nav-link d-block d-lg-none" href="">
             <div class="text-center">
                 <div class="basket-icon">
                     <i class="fa-solid fa-basket-shopping"></i>
