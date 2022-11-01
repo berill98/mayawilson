@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'home',
     'packages',
     'basket',
+    'profiles'
 ]
 
 MIDDLEWARE = [
