@@ -1,1 +1,1 @@
-web: gunicorn mayawilson.wsgi:application
+web: gunicorn main.wsgi:application
