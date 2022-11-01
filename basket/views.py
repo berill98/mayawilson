@@ -10,7 +10,7 @@ def view_basket(request):
 def add_to_basket(request, package_id):
     """ Add a package to the basket """
 
-    quantity = int(request.POST.get('quantity')),
+    quantity = int(1),
     basket = request.session.get('basket', {})
 
     basket[package_id] = quantity
