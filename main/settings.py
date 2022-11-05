@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'packages',
-    'basket',
     'profiles',
     'checkout',
 
@@ -69,7 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request', # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'basket.contexts.basket_contents',
+                'checkout.contexts.basket_contents',
             ],
         },
     },
