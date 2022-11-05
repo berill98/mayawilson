@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}
+- About me
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="logo-font mb-4 text-center">About me</h2>
+            <hr>
+        </div>
+        <div class="package-container col-10 offset-1">
+            <h2 class="logo-font">Hi there, it's me Maya</h2>
+            <p class="text-justify">First off, I want to let you know that I am so grateful that you are here.
+                My aim is to tell the story of your love and laughter
+                through images that are timeless. I believe in storytelling through details and emotional portraits. I
+                am all about capturing those raw, honest and
+                beautiful moments of your relationship that shows who you really are. I believe that photos should
+                capture emotion
+                that make you feel something when you look at them.</p>
+            <p class="text-justify">In addition to these above, I also love hiking in the forests, swimming and diving
+                in the seas,
+                growing my tomatoes, sleeping under the stars, waking up to birds chirping by the window, playing board
+                games, horse riding and going
+                on adventures, big or small at every opportunity. And mostly, I love sharing these experiences with the
+                people I love.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 text-center">
+            <div class="card border-0">
+                <img src="{% static 'images/about1.jpg' %}" alt="Women with her son">
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 text-center">
+            <div class="card h-20 border-0">
+                <img src="{% static 'images/about2.jpg' %}" alt="Women in white dress">
+            </div>
+        </div>
+    </div>
+    {% endblock %}
