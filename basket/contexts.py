@@ -12,14 +12,14 @@ def basket_contents(request):
     total = 0
     basket = request.session.get('basket', {})
 
-    for package_id, quantity in basket.items():
-        package = get_object_or_404(Package, pk=package_id)
+    for item_id, quantity in basket.items():
+        package = get_object_or_404(Package, pk=item_id)
         total = package.price
         basket_items.append({
-            'package_id': package_id,
-            'quantity': quantity,
-            'package': package,
-        })
+                'item_id': item_id,
+                'quantity': quantity,
+                'package': package,
+            })
 
     context = {
         'basket_items': basket_items,
