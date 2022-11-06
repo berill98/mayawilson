@@ -36,4 +36,5 @@ class Order(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
+        return f'SKU {self.package} on order {self.order_number}'
         return self.order_number
