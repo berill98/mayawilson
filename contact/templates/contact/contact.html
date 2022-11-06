@@ -21,32 +21,28 @@
 </div>
 
 <!-- Contact form -->
-<div class="col">
-    <form method="POST" action="{% url 'contact' %}" id="contact-form">
-        {% csrf_token %}
-        <fieldset class="rounded px-3 mb-5 text-center">
-            <label for="first_name" class=" requiredField">
-                First name<span class="asteriskField">*</span> </label>
-            {{ contact_form.first_name }}<br>
-            <label for="surname" class="requiredField">
-                Last name<span class="asteriskField">*</span> </label>
-            {{ contact_form.surname }}<br>
-            <label for="email" class=" requiredField">
-                Email<span class="asteriskField">*</span> </label>
-            {{ contact_form.email }}<br>
-        </fieldset>
-        <fieldset class="rounded px-3 mb-5 text-center">
-            <label for="subject">Subject</label>
-            {{ contact_form.subject }}<br>
-            <label for="query">The message</label><br>
-            {{ contact_form.query }}<br>
-            <label for="hearfrom">Where did you hear about me?</label>
-            {{ contact_form.hearfrom }}<br>
-        </fieldset>
-        <div class="text-center">
-            <button class="btn btn-color">Back to the home page</button>
-            <button id="send-button" class="btn btn-color">Send! </button>
+<div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <form method="POST" action="{% url 'contact' %}" id="contact-form">
+                {% csrf_token %}
+                <fieldset class="rounded px-3 mb-5 text-center">
+                    {{ contact_form.first_name|as_crispy_field }}<br>
+                    {{ contact_form.surname|as_crispy_field }}<br>
+                    {{ contact_form.email|as_crispy_field }}<br>
+                </fieldset>
+                <fieldset class="rounded px-3 mb-5 text-center">
+                    {{ contact_form.subject|as_crispy_field }}<br>
+                    {{ contact_form.query|as_crispy_field }}<br>
+                    {{ contact_form.hearfrom|as_crispy_field }}<br>
+                </fieldset>
+                <div class="text-center">
+                    <button class="btn btn-color mb-2">Back to the home page</button>
+                    <button id="send-button" class="btn btn-color mb-2">Send! </button>
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
 </div>
 {% endblock %}
