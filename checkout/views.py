@@ -9,6 +9,7 @@ from basket.contexts import basket_contents
 
 import stripe
 
+
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -29,10 +30,23 @@ def checkout(request):
         order_form = OrderForm(form_data)
 
         if order_form.is_valid():
-            order = order_form.save()
+            order = order_form.save(commit=False)
             
             for item_id, quantity in basket.items():
                 package = get_object_or_404(Package, pk=item_id)
+                total = package.price
+
+                context = {
+                'package': package,
+                'total': total,
+    }
+            
+            # Try to attach the package to the form 
+            order.package = package
+            order.order_total = total
+            print(total)
+            print(order.package)
+            order.save()
 
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
@@ -69,6 +83,7 @@ def checkout(request):
         }
 
         return render(request, template, context)
+
 
 def checkout_success(request, order_number):
     """
