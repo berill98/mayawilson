@@ -1,5 +1,8 @@
 # Maya Wilson Photography
 
+Welcome to Maya Wilson Photography!
+
+
 ## The goal for this project
 
 ## Site Owner Goals
@@ -15,7 +18,6 @@ As a first-time user:
 -	I want to view a list of the available photo packages
 -	I want to view individual package details
 -	I want to easily register for an account, if I want to return later
--	I want to be able to follow the website via social media
 
 As a registered user:
 
@@ -26,14 +28,12 @@ As a registered user:
 -	I want to have my own user profile
 -	I want to be able to add a photo package to my shopping bag
 -	I want to easily select a date for my photography session when purchasing it
--	I want to view the total of my purchases at any time
--	I want to view the items in my bag
--	I want to be able to remove items from my bag
+-	I want to view the package in my bag
 -	I want to easily enter payment information
 -	I want to feel my personal and payment information is safe and secure
 -	I want to view an order confirmation after checkout
 -	I want to receive an email confirmation after checking out
--	I want to see my order history
+-	I want to see my order history in my profile
 
 As an admin:
 
@@ -45,9 +45,15 @@ As an admin:
 
 ### Fonts
 
+- I have used Google Fonts to find the font that suits best to the feel of the website. I have used [Cedarville Cursive](https://fonts.google.com/specimen/Cedarville+Cursive) for the logo and the main titles and [Roboto](https://fonts.google.com/specimen/Roboto) for the page contents.
+
 ### Icons
 
+- The icons on the website were taken from [FontAwesome](https://fontawesome.com/).
+
 ### Colors
+
+- The main colours on the website are brown, white, and dark green. This is because I wanted a simple, clean design with natural colours.
 
 ### Wireframes
 
@@ -69,11 +75,17 @@ As an admin:
 
 ## Testing
 
+To view all testing documentation please refer to [TESTING.md](TESTING.md).
+
 ## Deployment
 
 ## Credits
 
 ### Media
+
+| Media  | Photographer  | Link |
+| :------------ |:---------------:| -----:|
+| Background image |  | []() |
 
 ### Resources used
 
