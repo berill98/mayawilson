@@ -50,7 +50,9 @@ def checkout(request):
 
         if order_form.is_valid():
             order = order_form.save(commit=False)
-            
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_basket = json.dumps(basket)
             for item_id, quantity in basket.items():
                 package = get_object_or_404(Package, pk=item_id)
                 total = package.price
