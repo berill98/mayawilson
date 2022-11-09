@@ -66,10 +66,6 @@ body {
     border: 1px solid black !important;
 }
 
-.remove-item {
-    cursor: pointer;
-}
-
 .overlay {
 	height: 100%;
 	width: 100%;
