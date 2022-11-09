@@ -8,6 +8,7 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order
 from packages.models import Package
+from profiles.models import UserProfile
 from basket.contexts import basket_contents
 
 import stripe
@@ -112,6 +113,12 @@ def checkout_success(request, order_number):
     Handle successful checkouts
     """
     order = get_object_or_404(Order, order_number=order_number)
+
+    profile = UserProfile.objects.get(user=request.user)
+    # Attach the user's profile to the order
+    order.user_profile = profile
+    order.save()
+
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
