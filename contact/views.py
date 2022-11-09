@@ -35,25 +35,7 @@ def contact(request):
         'contact_form': contact_form,
     }
 
-    return render(request, template, context)       
-
-    # Send_confirmation_email(user_contact)
-
-
-def send_confirmation_email(contact):
-    """Send the user a confirmation email"""
-    cust_email = contact(request).email
-    subject = 'Thank you for your message to Maya Wilson Photography'
-    body = render_to_string(
-            'contact/confirmation_emails/confirmation_email_body.txt',
-            {'contact': user_contact})
-
-    send_mail(
-        subject,
-        body,
-        settings.DEFAULT_FROM_EMAIL,
-        [cust_email]
-    )
+    return render(request, template, context)
 
 
 def contact_success(request):
