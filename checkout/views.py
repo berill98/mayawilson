@@ -13,6 +13,7 @@ from basket.contexts import basket_contents
 import stripe
 import json
 
+
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -58,10 +59,10 @@ def checkout(request):
                 total = package.price
 
                 context = {
-                'package': package,
-                'total': total,
-    }
-            
+                    'package': package,
+                    'total': total,
+                }
+
             # Try to attach the package to the form 
             order.package = package
             order.order_total = total
@@ -110,7 +111,6 @@ def checkout_success(request, order_number):
     """
     Handle successful checkouts
     """
-    save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
