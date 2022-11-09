@@ -4,6 +4,10 @@ from django.db import models
 from django.conf import settings
 
 class Contact(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Queries'
+
     query_number = models.CharField(max_length=32, null=False, editable=False, default='')
     email_date = models.DateTimeField(auto_now_add=True)
     first_name = models.CharField(max_length=50, null=False, blank=False)
