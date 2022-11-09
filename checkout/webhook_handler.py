@@ -1,7 +1,11 @@
 from django.http import HttpResponse
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.conf import settings
 
 from .models import Order
 from packages.models import Package
+from profiles.models import UserProfile
 
 import json
 import time
@@ -11,6 +15,25 @@ class StripeWH_Handler:
 
     def __init__(self, request):
         self.request = request
+
+    
+    def _send_confirmation_email(self, order):
+        """Send the user a confirmation email"""
+        cust_email = order.email
+        subject = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_subject.txt',
+            {'order': order})
+        body = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_body.txt',
+            {'order': order})
+        
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [cust_email]
+        )        
+
 
     def handle_event(self, event):
         """
@@ -35,6 +58,13 @@ class StripeWH_Handler:
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
+
+        # Update profile information if save_info was checked
+        profile = None
+        username = intent.metadata.username
+        profile = UserProfile.objects.get(user__username=username)
+        profile.save()
+
 
         order_exists = False
         attempt = 1

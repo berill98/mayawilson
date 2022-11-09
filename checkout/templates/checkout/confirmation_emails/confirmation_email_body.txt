@@ -1,0 +1,16 @@
+Hello {{ order.full_name }}!
+
+This is a confirmation of your order at Maya Wilson Photography. Your order information is below:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+Your photo package: {{ order.package.name }}
+Order Total: ${{ order.order_total }}
+
+If you have any questions, feel free to contact us any time.
+
+Thank you for your order!
+
+Many thanks,
+
+Maya Wilson
