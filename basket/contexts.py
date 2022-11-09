@@ -11,6 +11,7 @@ def basket_contents(request):
     basket_items = []
     total = 0
     basket = request.session.get('basket', {})
+    date = request.POST.get('photodate')
 
     for item_id, quantity in basket.items():
         package = get_object_or_404(Package, pk=item_id)
@@ -19,6 +20,7 @@ def basket_contents(request):
                 'item_id': item_id,
                 'quantity': quantity,
                 'package': package,
+                'date': date,
             })
 
     context = {
