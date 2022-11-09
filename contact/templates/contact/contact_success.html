@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}
+- Thank you!
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="logo-font mb-4 text-center">Thank you!</h2>
+                <hr>
+                <p>We received your enquiry and will be in touch soon!</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-7"></div>
+        </div>
+        <div class="row">
+			<div class="col-12 col-lg-7 text-right">
+				<a href="{% url 'packages' %}" class="btn btn-color rounded-0 my-2">
+					<span class="text-uppercase">Check the available packages!</span>
+				</a>
+			</div>
+		</div>
+    </div>
+    <div id="loading-overlay">
+    </div>
+{% endblock %}

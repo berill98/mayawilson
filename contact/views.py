@@ -15,24 +15,34 @@ def contact(request):
             'email': request.POST['email'],
             'subject': request.POST['subject'],
             'query': request.POST['query'],
-           'hearfrom': request.POST['hearfrom']
+            'hearfrom': request.POST['hearfrom']
         }
         contact_form = ContactForm(form_data)
 
+        if contact_form.is_valid():
+            contact = contact_form.save(commit=False)
+            contact.save()
+
+            return redirect(reverse('contact_success'))
+        else:
+            messages.error(request, 'There was an error with your form. \
+                Please double check your information.')
+
     contact_form = ContactForm()
+
     template = 'contact/contact.html'
     context = {
         'contact_form': contact_form,
     }
 
-    return render(request, template, context)
-        
-    #send_confirmation_email(user_contact)
+    return render(request, template, context)       
+
+    # Send_confirmation_email(user_contact)
 
 
-def send_confirmation_email(user_contact):
+def send_confirmation_email(contact):
     """Send the user a confirmation email"""
-    cust_email = user_contact.email
+    cust_email = contact(request).email
     subject = 'Thank you for your message to Maya Wilson Photography'
     body = render_to_string(
             'contact/confirmation_emails/confirmation_email_body.txt',
@@ -44,3 +54,10 @@ def send_confirmation_email(user_contact):
         settings.DEFAULT_FROM_EMAIL,
         [cust_email]
     )
+
+
+def contact_success(request):
+
+    template = 'contact/contact_success.html'
+
+    return render(request, template)
