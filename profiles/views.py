@@ -13,6 +13,7 @@ def profile(request):
 
     template = 'profiles/profile.html'
     context = {
+        'profile': profile,
         'orders': orders,
         'on_profile_page': True
     }
