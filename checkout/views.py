@@ -55,18 +55,21 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_basket = json.dumps(basket)
-            for item_id, quantity in basket.items():
+            for item_id, date in basket.items():
                 package = get_object_or_404(Package, pk=item_id)
                 total = package.price
+                order.photodate = date
 
                 context = {
                     'package': package,
                     'total': total,
+                    'date': date,
                 }
 
             # Try to attach the package to the form 
             order.package = package
             order.order_total = total
+            
             print(total)
             print(order.package)
             order.save()
