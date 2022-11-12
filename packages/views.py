@@ -57,7 +57,7 @@ def add_package(request):
 
 @login_required
 def edit_package(request, package_id):
-    """ Edit a product in the store """
+    """ Edit a package in the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))

@@ -37,7 +37,7 @@ def contact(request):
 
 
 def contact_success(request):
-
+    """ A view to return the contact success page """
     template = 'contact/contact_success.html'
 
     return render(request, template)
