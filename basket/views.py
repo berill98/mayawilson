@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
-# Create your views here.
+@login_required
 def add_to_basket(request, package_id):
-    """ Add a package to the basket """
+    """ Add a package to the basket """   
 
     date = request.POST.get('photodate')
 
