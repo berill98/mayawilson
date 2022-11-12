@@ -182,7 +182,22 @@ Hand-drawn wireframes.
 
 ### Defensive Programming
 
+To protect the site and defend against any "brute force", I added some defensive programming:
+-   Where I have used function based views I have used Django's login_required decorator to restrict access as required. 
+-   Check if a user is logged in. This checks if tuser is logged in, if so allows the user to perform the action. If not will redirect user to the appropriate page.
+-   Check if user is superuser (is admin). The admin is the only one who can add, edit and delete packages. If the check fails, the user is redirected and a message displayed.
+-   Certain action buttons are only displayed to certain users, for example 'Package management' is only displayed to superusers. Only logged in user can add any package to their basket.
+-   If incorrect or empty data is added to a form, the form won't submit and a warning will appear to the user informing them what field raised the error.
+-   The database url and secret key are stored in the env.py file to prevent unwanted connections to the database. Stripe keys are also stored in the env.py file. 
+-   Cross-Site Request Forgery (CSRF) tokens were used on all forms throughout this site.
+
 ### Features left to implement
+
+- An option for newsletter signup.
+- Users to have ability to delete their account.
+- A portfolio page.
+- Users to have ability to leave reviews.
+- Enquiries dashboard for the superusers.
 
 ## Structure of the site
 
