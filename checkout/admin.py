@@ -13,4 +13,5 @@ class OrderAdmin(admin.ModelAdmin):
 
     ordering = ('-photodate',)
 
+
 admin.site.register(Order, OrderAdmin)

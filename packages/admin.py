@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Package
 
+
 class PackageAdmin(admin.ModelAdmin):
     list_display = (
         'name',
@@ -11,5 +12,6 @@ class PackageAdmin(admin.ModelAdmin):
     )
 
     ordering = ('price',)
+
 
 admin.site.register(Package, PackageAdmin)

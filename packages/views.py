@@ -4,6 +4,7 @@ from .models import Package
 from .forms import PackageForm
 from django.contrib.auth.decorators import login_required
 
+
 def all_packages(request):
     """ A view to show all packages """
 
@@ -14,6 +15,7 @@ def all_packages(request):
     }
 
     return render(request, 'packages/packages.html', context)
+
 
 def package_detail(request, package_id):
     """ A view to show individual package details """
@@ -31,9 +33,8 @@ def package_detail(request, package_id):
 def add_package(request):
     """ Add a package to the store """
     if not request.user.is_superuser:
-            messages.error(request, 'Sorry, only store owners can do that.')
-            return redirect(reverse('home'))
-
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = PackageForm(request.POST, request.FILES)
@@ -45,7 +46,7 @@ def add_package(request):
             messages.error(request, 'Failed to add package. Please ensure the form is valid.')
     else:
         form = PackageForm()
-        
+
     template = 'packages/add_package.html'
     context = {
         'form': form,
@@ -58,9 +59,8 @@ def add_package(request):
 def edit_package(request, package_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
-            messages.error(request, 'Sorry, only store owners can do that.')
-            return redirect(reverse('home'))
-
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
 
     package = get_object_or_404(Package, pk=package_id)
     if request.method == 'POST':
@@ -88,8 +88,8 @@ def edit_package(request, package_id):
 def delete_package(request, package_id):
     """ Delete a package from the website """
     if not request.user.is_superuser:
-            messages.error(request, 'Sorry, only store owners can do that.')
-            return redirect(reverse('home'))
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
 
     package = get_object_or_404(Package, pk=package_id)
     package.delete()

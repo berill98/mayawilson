@@ -15,6 +15,7 @@ from django.contrib.auth.decorators import login_required
 import stripe
 import json
 
+
 @login_required
 @require_POST
 def cache_checkout_data(request):
@@ -30,6 +31,7 @@ def cache_checkout_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
+
 
 @login_required
 def checkout(request):
@@ -70,7 +72,7 @@ def checkout(request):
             # Try to attach the package to the form 
             order.package = package
             order.order_total = total
-            
+
             print(total)
             print(order.package)
             order.save()
@@ -110,6 +112,7 @@ def checkout(request):
         }
 
         return render(request, template, context)
+
 
 @login_required
 def checkout_success(request, order_number):
