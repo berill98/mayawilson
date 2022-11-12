@@ -1,11 +1,21 @@
 # Maya Wilson Photography
 
 Welcome to Maya Wilson Photography!
+Users can browse and purchase the different photography packages and make an enquiry. They can also learn more about the photographer.
 
+The payment system uses Stripe. Please note that this website is for educational purposes do not enter any personal credit/debit card details when using the site.
 
-## The goal for this project
+To test this system, test card details can be used. A list of these can be found in Stripe's documentation [here](https://stripe.com/docs/testing#cards).
+
+The live link can be found here - [Maya Wilson](https://mayawilson.herokuapp.com/)
 
 ## Site Owner Goals
+
+- To provide  information about the available photo packages.
+- To promote herself as a photographer.
+- To encourage users to create an account.
+- To encourage users to buy photo sessions.
+- To present the user with a website that is responsive and easy to use.
 
 ## User stories
 
@@ -21,7 +31,6 @@ As a first-time user:
 
 As a registered user:
 
--	I want to easily register for an account, if I want to return later
 -	I want to easily login or logout
 -	I want to easily recover my password in case I forget it
 -	I want to receive an email confirmation after registering
@@ -32,7 +41,6 @@ As a registered user:
 -	I want to easily enter payment information
 -	I want to feel my personal and payment information is safe and secure
 -	I want to view an order confirmation after checkout
--	I want to receive an email confirmation after checking out
 -	I want to see my order history in my profile
 
 As an admin:
@@ -40,6 +48,10 @@ As an admin:
 -	I want to be able to add a new photography package
 -	I want to edit/update a package
 -	I want to delete a package
+
+User stories not yet implemented:
+-   As a first-time user, I want to find the photographer's whole portfolio on the site.
+-   As a registered user, I would like to be able to leave reviews.
 
 ## UX
 
