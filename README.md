@@ -201,6 +201,26 @@ To protect the site and defend against any "brute force", I added some defensive
 
 ## Structure of the site
 
+The structure of the site has been developed to enable users to access and use the site with ease.
+- Home Page- accessible by all users, whether logged in or not. 
+- Navbar - is accessible to all users. The navbar changes to a sidenav on tablet screens and smaller for responsiveness. The options available under the account icon change depending on whether a user is logged in or not.
+
+    * For logged in users:  
+![Account icon for logged in users](docs/readme_images/accountforusers.png)
+    * For not logged in users:  
+![Account icon for not logged in users](docs/readme_images/accountfornotloggedin.png)
+    * For admin:  
+![Account icon for admin](docs/readme_images/accountforadmin.png)
+
+- The About page is accessible to all users, whether logged in or not.
+- The Contact page is accessible to all users, whether logged in or not.
+- List of packages and the details of the packages are accessible to all users, whether logged in or not.
+- Book this package button and the Checkout page are only accessible to registered users.
+- Edit and delete package buttons are only accessible to superusers.ir order history.
+- Checkout page is only accessible to logged in users once they have a package in their basket.
+
+![Database Schema Diagram]()
+
 ## Technologies used
 
 ### Languages
