@@ -225,7 +225,26 @@ The structure of the site has been developed to enable users to access and use t
 
 ### Languages
 
+- Python
+- HTML5
+- CSS3
+- Javascript
+
 ### Frameworks, Tools and Libraries
+
+- [Django](https://www.djangoproject.com/)
+- [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+- [Stripe](https://stripe.com/ie)
+- [AWS](https://aws.amazon.com/?nc2=h_lg)
+- [Heroku](https://dashboard.heroku.com/login)
+- [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)
+- [Font Awesome](https://fontawesome.com/)
+- [GitHub](https://github.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [W3C](https://www.w3.org/)
+- [Jshint](https://jshint.com/)
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+- [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 
 ## Testing
 
