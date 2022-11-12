@@ -258,11 +258,19 @@ To view all testing documentation please refer to [TESTING.md](TESTING.md).
 
 | Media  | Photographer  | Link |
 | :------------ |:---------------:| -----:|
-| Background image |  | []() |
+| Standard package photo | Jessica Rockowitz | [Unsplash](https://images.unsplash.com/photo-1542037012038-5f9fb2b3c681?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80) |
+| Mini package photo | Jessica Rockowitz | [Unsplash](https://images.unsplash.com/photo-1643130420647-bbb7bc1b695a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80) |
+| Premium package photo | Jessica Rockowitz | [Unsplash](https://images.unsplash.com/photo-1542036571694-e620974a6b5a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80) |
+| Photo on About page | Jessica Rockowitz | [Unsplash](https://images.unsplash.com/photo-1642272288582-c183724556d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80) |
+| Photo on About page | Jessica Rockowitz | [Unsplash](https://images.unsplash.com/photo-1542036899624-42218b01ec1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80) |
 
 ### Resources used
 
-I used the [Code Institute](https://codeinstitute.net/) lessons as an inspiration for this project.
+- [W3Schools](https://www.w3schools.com/)
+- [Django Docs](https://docs.djangoproject.com/en/4.0/)
+- [Bootstrap 4.6 Docs](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- [Stack Overflow](https://stackoverflow.com/)
+- [Code Institute - Boutique Ado Walkthrough Project](https://github.com/Code-Institute-Solutions/boutique_ado_v1)
 
 ### Setup and text in README.md
 
