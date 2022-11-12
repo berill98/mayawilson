@@ -69,9 +69,116 @@ User stories not yet implemented:
 
 ### Wireframes
 
+Hand-drawn wireframes.
+<details><summary><b>Wireframes</b> (click to expand)</summary>
+
+- [Home Page]()
+- [Login Page]()
+- [Registration Page]()
+- [About Page]()
+- [Contact Page]()
+- [Packages Page]()
+- [Package Details Page]()
+- [Checkout Page]()
+- [Profile Page]()
+
+</details>
+
 ## Features
 
 ### Existing Features
+
+#### Design
+
+    - A clean and simple design and layout with consistency throughout.
+    - Responsive design allowing users to use site across all devices.
+![Design](docs/readme_images/home.png)
+
+#### Header
+    1. Navbar
+    - Easy navigation by using the navigation bar. Nav links are clearly idenfied both on desktop and when sidenav is expanded on smaller the devices.
+
+    2. Logo
+    - The leaf logo is positioned in the top left of the header and is linked to the home pagefor help the navigation of the users.
+
+    3. User icon
+    - The User icon is a drop down menu which includes the Sign up and Log in links. Once a user is logged in, the options will change to My Profile and Logout. If the user is superuser Package Management becomes available in the dropdown menu.
+
+    4. Bag icon
+    - It is on the right side of the header next to the user icon. Once a package is added to the basket a number displaying the total price appears, and the colour changes into green.
+    Once a product is added to the bag, a number displaying the total quantity of items appears, located at the top right of the bag icon. Clicking the bag icon navigates the user to the checkout page which displays the added package and the checkout form.
+
+#### Home page
+
+    - The home page includes a call to action button which encourages the user to 'Book now'.
+
+#### About page
+
+    - The About page includes a little introduction from the photographer and two photos of her portfolio.
+
+#### Packages page
+
+    - Each package card shows an image, its name and price.
+    - If the user is a superuser, edit and delete buttons will appear at the bottom of the card.
+    - If the user clicks on the card it will take them to the package details page.
+
+#### Package details page
+
+    - The package details page displays the image, name, price, package details details like photos included, duration time and a short description.
+    - If the user is a superuser, edit and delete buttons will appear.
+    - If the user is logged in a date input field and a disabled quantity field will appear along with the Book this package button.
+
+#### Package Management
+
+    1. Add package
+    - The add package page can be accessed by clicking the 'Package Management' button in the user dropdown meneu and is only visible to superusers.
+    - If a user tries to add a product without being a superuser they are redirected to the home page.
+    - The user must fill out all the fields that have an Asterix. If the form is submitted with any of these fields left blank or with just whitespace then an error message will appear above that particular field, notifying the user of the issue.
+    - The user can add a photo if they wish. If they choose not to, a default image displays as their package image.
+    - Clicking the 'Add Package' button at the bottom of the form will create the package.
+    - The user will receive a success message notifying them that the product has been successfully added.
+
+    2. Edit a package
+    - The superuser can edit a Package by clicking the edit button on the package card or on the package detail page.
+    - The form opens with all fields populated with the original content.
+    - If a user tries to add a package without being a superuser they are redirected to the home page.
+    - Clicking the 'Update Package' button at the bottom of the form will update the package with the changes.
+    - The superuser will receive a success message notifying them that the package has been successfully updated.
+
+    3. Delete a package
+    - The superuser can choose to delete a package by clicking the delete button on the package card or on the package detail page.
+    - The superuser will receive a success message notifying them that the package has been successfully deleted.
+
+#### Contact page
+
+    - A user can open up the contact form by clicking on the "Contact" button in the navbar.
+    - The user must fill out all the fields that have an Asterix. If the form is submitted with any of these fields left blank or with just whitespace then an error message will appear above that particular field, notifying the user of the issue.
+    - When the form is submitted, the user is taken to the confirmation page.
+
+#### Login, logout
+
+    - Users of the site can create an account and verify their email address. (Link emailed to the address they provided)
+    - Users can login into their existing account.
+    - Users can logout of their account.
+    - Users can reset their password if they forget it.
+    - Success messages inform the user if they have logged in/logged out successfully.
+
+#### My profile
+
+    - Logged in users have access to their profile, where they can view their order history.
+
+#### Checkout
+
+    - The user can fill out a form with their contact details, address and card number.
+    - The user must fill out all the fields that have an Asterix. If the form is submitted with any of these fields left blank or with just whitespace then an error message will appear above that particular field, notifying the user of the issue.
+    - The user can see a summary of their purchase, the package name, the booked date and the total price.
+    - Clicking the package image in the summary will take the user to that product's detail page.
+
+    - The card payment is handled by Stripe to ensure secure payment.
+    - Incorrect card numbers will automatically show an invalid card number error.
+    - A loading screen will appear when a payment is being processed to stop the user clicking away.
+    - There is a warning message at the bottom of the page informing the user of how much their card is about to be charged.
+    - When the form is submitted, the user is taken to the confirmation page.
 
 ### Defensive Programming
 
