@@ -254,7 +254,7 @@ The structure of the site has been developed to enable users to access and use t
 - Edit and delete package buttons are only accessible to superusers.ir order history.
 - Checkout page is only accessible to logged in users once they have a package in their basket.
 
-![Database Schema Diagram]()
+![Database Schema Diagram](docs/readme_images/database.png)
 
 ## Technologies used
 
@@ -280,6 +280,7 @@ The structure of the site has been developed to enable users to access and use t
 - [Jshint](https://jshint.com/)
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
 - [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- [DB Designer](https://www.dbdesigner.net/)
 
 ## Testing
 
