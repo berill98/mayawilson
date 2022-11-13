@@ -74,15 +74,12 @@ User stories not yet implemented:
 Hand-drawn wireframes.
 <details><summary><b>Wireframes</b> (click to expand)</summary>
 
-- [Home Page]()
-- [Login Page]()
-- [Registration Page]()
-- [About Page]()
-- [Contact Page]()
-- [Packages Page]()
-- [Package Details Page]()
-- [Checkout Page]()
-- [Profile Page]()
+- [Home Page](docs/wireframes/home.jpeg)
+- [Login Page](docs/wireframes/login.jpeg)
+- [About Page](docs/wireframes/about.jpeg)
+- [Package Details Page](docs/wireframes/details.jpeg)
+- [Checkout Page](docs/wireframes/checkout.jpeg)
+- [Profile Page](docs/wireframes/profile.jpeg)
 
 </details>
 
