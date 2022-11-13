@@ -36,3 +36,49 @@ Flake8 was used to test the Python files in the project.
 
 ![Flake8 validation](docs/readme_images/flake8.png)
 
+### Accessibility
+The site achieved a Lighthouse accessibility score of 97% which confirms that the website is accessible.
+
+![Accessibility](docs/readme_images/accessibility.png)
+
+
+## Responsiveness Testing
+
+- The site was tested on various devices such as desktop, laptops and mobiles to ensure responsiveness. The website performed as intended. The responsive design was also checked using Chrome Developer Tools across multiple devices.
+
+<details><summary><b>Responsiveness testing</b> (click to expand)</summary>
+
+Desktop view
+
+![Desktop size](docs/readme_images/chrome_desktop.png)
+
+Tablet view
+
+![Tablet size](docs/readme_images/edge_tablet.png)
+
+Mobile view
+
+![Mobile size](docs/readme_images/firefox_mobile.png)
+
+</details>
+
+## Browser Testing
+
+- The site was tested on different browsers (Google Chrome, Firefox, Microsoft Edge) without issues.
+
+<details><summary><b>Browser testing</b> (click to expand)</summary>
+
+Google Chrome
+
+![Google Chrome](docs/readme_images/chrome_desktop.png)
+
+Microsoft Edge
+
+![Microsoft Edge](docs/readme_images/edge_tablet.png)
+
+Mozzilla Firefox
+
+![Mozilla Firefox](docs/readme_images/firefox_mobile.png)
+
+</details>
+
