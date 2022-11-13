@@ -114,7 +114,7 @@ Hand-drawn wireframes.
 
 4. Bag icon
 - It is on the right side of the header next to the user icon. Once a package is added to the basket a number displaying the total price appears, and the colour changes into green.
-Once a product is added to the bag, a number displaying the total quantity of items appears, located at the top right of the bag icon. Clicking the bag icon navigates the user to the checkout page which displays the added package and the checkout form.
+Once a package is added to the bag, a number displaying the total quantity of items appears, located at the top right of the bag icon. Clicking the bag icon navigates the user to the checkout page which displays the added package and the checkout form.
 
 ![Icons](docs/readme_images/baggreen.png)
 
@@ -150,11 +150,11 @@ Once a product is added to the bag, a number displaying the total quantity of it
 
 1. Add package
 - The add package page can be accessed by clicking the 'Package Management' button in the user dropdown meneu and is only visible to superusers.
-- If a user tries to add a product without being a superuser they are redirected to the home page.
+- If a user tries to add a package without being a superuser they are redirected to the home page.
 - The user must fill out all the fields that have an Asterix. If the form is submitted with any of these fields left blank or with just whitespace then an error message will appear above that particular field, notifying the user of the issue.
 - The user can add a photo if they wish. If they choose not to, a default image displays as their package image.
 - Clicking the 'Add Package' button at the bottom of the form will create the package.
-- The user will receive a success message notifying them that the product has been successfully added.
+- The user will receive a success message notifying them that the package has been successfully added.
 
 ![Add package](docs/readme_images/addpackage.png)
 
@@ -204,7 +204,7 @@ Once a product is added to the bag, a number displaying the total quantity of it
 - The user can fill out a form with their contact details, address and card number.
 - The user must fill out all the fields that have an Asterix. If the form is submitted with any of these fields left blank or with just whitespace then an error message will appear above that particular field, notifying the user of the issue.
 - The user can see a summary of their purchase, the package name, the booked date and the total price.
-- Clicking the package image in the summary will take the user to that product's detail page.
+- Clicking the package image in the summary will take the user to that package's detail page.
 
 - The card payment is handled by Stripe to ensure secure payment.
 - Incorrect card numbers will automatically show an invalid card number error.
