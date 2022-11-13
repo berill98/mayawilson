@@ -9,6 +9,8 @@ To test this system, test card details can be used. A list of these can be found
 
 The live link can be found here - [Maya Wilson](https://mayawilson.herokuapp.com/)
 
+![Responsive](docs/readme_images/responsive.png)
+
 ## Site Owner Goals
 
 - To provide  information about the available photo packages.
