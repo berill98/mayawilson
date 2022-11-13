@@ -15,7 +15,8 @@ class ContactForm(forms.ModelForm):
             'surname': 'Last name',
             'email': 'Your email address',
             'subject': "Wedding/Family session",
-            'query': "Share your vision for your photoshoot, any ideas you have and tell me a little bit about you",
+            'query': "Share your vision for your photoshoot, \
+                any ideas you have and tell me a little bit about you",
             'hearfrom': "Instagram, Facebook",
         }
         self.fields['first_name'].widget.attrs['autofocus'] = True

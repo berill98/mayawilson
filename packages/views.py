@@ -43,7 +43,9 @@ def add_package(request):
             messages.success(request, 'Successfully added package!')
             return redirect(reverse('package_detail', args=[package.id]))
         else:
-            messages.error(request, 'Failed to add package. Please ensure the form is valid.')
+            messages.error(request, (
+                'Failed to add package. Please ensure the form is valid.')
+                )
     else:
         form = PackageForm()
 
@@ -70,10 +72,14 @@ def edit_package(request, package_id):
             messages.success(request, 'Successfully updated package!')
             return redirect(reverse('package_detail', args=[package.id]))
         else:
-            messages.error(request, 'Failed to update package. Please ensure the form is valid.')
+            messages.error(request, (
+                'Failed to update package. Please ensure the form is valid.')
+            )
     else:
         form = PackageForm(instance=package)
-        messages.info(request, f'You are editing {package.name}')
+        messages.info(request, (
+            f'You are editing {package.name}')
+        )
 
     template = 'packages/edit_package.html'
     context = {

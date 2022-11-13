@@ -14,14 +14,17 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Package',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=20)),
                 ('description', models.TextField()),
                 ('price', models.DecimalField(decimal_places=2, max_digits=6)),
                 ('duration', models.IntegerField(blank=True, null=True)),
                 ('photo_count', models.IntegerField(blank=True, null=True)),
-                ('image_url', models.URLField(blank=True, max_length=1024, null=True)),
-                ('image', models.ImageField(blank=True, null=True, upload_to='')),
+                ('image_url', models.URLField(blank=True,
+                 max_length=1024, null=True)),
+                ('image', models.ImageField(blank=True,
+                 null=True, upload_to='')),
             ],
         ),
     ]

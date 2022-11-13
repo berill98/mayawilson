@@ -1,8 +1,6 @@
-from django.conf import settings
+
 from django.shortcuts import get_object_or_404
 from packages.models import Package
-
-from .views import add_to_basket
 
 
 def basket_contents(request):

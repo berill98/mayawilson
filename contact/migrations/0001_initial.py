@@ -14,14 +14,17 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Contact',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('email_date', models.DateTimeField(auto_now_add=True)),
                 ('first_name', models.CharField(max_length=50)),
                 ('surname', models.CharField(max_length=50)),
                 ('email', models.EmailField(max_length=254)),
-                ('subject', models.CharField(blank=True, max_length=254, null=True)),
+                ('subject', models.CharField(blank=True,
+                 max_length=254, null=True)),
                 ('query', models.TextField(blank=True, null=True)),
-                ('hearfrom', models.CharField(blank=True, max_length=254, null=True)),
+                ('hearfrom', models.CharField(blank=True,
+                 max_length=254, null=True)),
             ],
         ),
     ]

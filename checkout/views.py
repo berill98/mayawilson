@@ -80,14 +80,16 @@ def checkout(request):
             print(order.package)
             order.save()
 
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success',
+                                    args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
         basket = request.session.get('basket', {})
         if not basket:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(request,
+                           "There's nothing in your bag at the moment")
             return redirect(reverse('packages'))
 
         current_basket = basket_contents(request)
@@ -129,7 +131,7 @@ def checkout_success(request, order_number):
     order.user_profile = profile
     order.save()
 
-    messages.success(request, f'Order successfully processed!')
+    messages.success(request, 'Order successfully processed!')
 
     if 'basket' in request.session:
         del request.session['basket']
